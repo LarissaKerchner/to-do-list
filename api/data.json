@@ -1,0 +1,44 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "value": "estudar react",
+      "checked": true
+    },
+    {
+      "id": "2",
+      "value": "estudar node",
+      "checked": true
+    },
+    {
+      "id": "3",
+      "value": "estudar python",
+      "checked": true
+    },
+    {
+      "id": "4",
+      "value": "estudar C#",
+      "checked": true
+    },
+    {
+      "id": "5",
+      "value": "estudar Java",
+      "checked": true
+    },
+    {
+      "id": "6",
+      "value": "estudar Android",
+      "checked": true
+    },
+    {
+      "id": "7",
+      "value": "Revisar Front-End",
+      "checked": false
+    },
+    {
+      "id": "8",
+      "value": "Revisar Back-End",
+      "checked": false
+    }
+  ]
+}
