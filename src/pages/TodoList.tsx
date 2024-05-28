@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom"
 
 function TodoList() {
     const navigate = useNavigate();
-    const { user, getTodos, loading, todos, editTodos } = useContext(Context);
+    const { user, getTodos, loading, todos, editTodos, removeTodos } = useContext(Context);
 
     useEffect(() => {
         if(!todos.length) {
@@ -18,6 +18,10 @@ function TodoList() {
     const handleChange = (todo: Todo) => {
         const update: Todo = {...todo, checked: !todo.checked};
         editTodos(update);
+    }
+
+    const handleRemove = (todo: Todo) => {
+        removeTodos(todo);
     }
 
     return (
@@ -38,10 +42,11 @@ function TodoList() {
                                     value={todo.value} 
                                     onChange={() => handleChange(todo)}/>
                                     {todo.value}
-                                    </li>
-                            );
-                        })
-                };
+                                    <button onClick={() => handleRemove(todo)}>X</button>
+                            </li>
+                        )
+                    })
+                }
             </ul>
         </>
     )

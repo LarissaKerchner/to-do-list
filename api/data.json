@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "id": "1",
-      "value": "estudar react",
-      "checked": true
-    },
-    {
       "id": "2",
       "value": "estudar node",
       "checked": true
@@ -13,11 +8,6 @@
     {
       "id": "3",
       "value": "estudar python",
-      "checked": true
-    },
-    {
-      "id": "4",
-      "value": "estudar C#",
       "checked": true
     },
     {
@@ -36,8 +26,8 @@
       "checked": false
     },
     {
-      "id": "8",
-      "value": "Revisar Back-End",
+      "id": "dce3",
+      "value": "lavar roupa",
       "checked": false
     }
   ]

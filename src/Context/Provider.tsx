@@ -1,6 +1,6 @@
 import { ReactNode, useCallback, useMemo, useState } from "react"
 import Context from "./Context"
-import { Todo, fetchTodos, postTodo, putTodo } from "../../api/todosApi"
+import { Todo, deleteTodo, fetchTodos, postTodo, putTodo } from "../../api/todosApi"
 
 type ProviderProps = {
     children: ReactNode
@@ -14,6 +14,7 @@ export type ProviderValues = {
     todos: Todo[]
     editTodos: (todo: Todo) => Promise<void>
     addTodos: (todo: string) => Promise<void>
+    removeTodos: (todo: Todo) => Promise<void>
 }
 
 function Provider( {children}: ProviderProps) {
@@ -69,6 +70,19 @@ function Provider( {children}: ProviderProps) {
         }
     }
 
+    const removeTodos = async (todo: Todo) => {
+        try {
+            setLoading(true);
+            await deleteTodo(todo);
+            setTodos((prevTodos) => prevTodos.filter((td) => td.id !== todo.id));
+        } catch (error) {
+            console.log("Erro ao deletar dados");
+            
+        } finally {
+            setLoading(false);
+        }
+    };
+
     const values: ProviderValues = useMemo(() => ({
         user,
         onLogin,
@@ -76,7 +90,8 @@ function Provider( {children}: ProviderProps) {
         loading,
         todos,
         editTodos,
-        addTodos
+        addTodos,
+        removeTodos
     }), [user, loading, todos])
        
 

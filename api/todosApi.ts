@@ -10,8 +10,8 @@ export async function fetchTodos(): Promise<Todo[]> {
     try {
         const response = await fetch(`${URL}/todos`);
         return response.json() as Promise<Todo[]>;
-    } catch (e) {
-        console.log(e.message);
+    } catch (error: any) {
+        console.log(error.message);
         alert('Serviço indisponível');
         return [];
     }
