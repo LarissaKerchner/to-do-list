@@ -3,31 +3,26 @@
     {
       "id": "2",
       "value": "estudar node",
-      "checked": true
+      "checked": false
     },
     {
       "id": "3",
       "value": "estudar python",
-      "checked": true
+      "checked": false
     },
     {
       "id": "5",
       "value": "estudar Java",
-      "checked": true
+      "checked": false
     },
     {
       "id": "6",
       "value": "estudar Android",
-      "checked": true
+      "checked": false
     },
     {
       "id": "7",
       "value": "Revisar Front-End",
-      "checked": false
-    },
-    {
-      "id": "dce3",
-      "value": "lavar roupa",
       "checked": false
     }
   ]
